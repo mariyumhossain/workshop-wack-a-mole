@@ -16,12 +16,12 @@ setInterval(function(){
     var randomHoleNum = Math.floor(Math.random() * Math.floor(length))
     hole[randomHoleNum].classList.toggle("mole")
 
-},200)
+},2000)
 
 gameSquare.addEventListener("click",function(click){
     if (click.target.matches(".mole")) { 
         score++
         scoreDisplay.innerText = score
-        click.target.classList.toggle('mole')
+        click.target.classList.remove('mole')
     }
 })
